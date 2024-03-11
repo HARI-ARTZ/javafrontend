@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/icon" href="https://tse2.mm.bing.net/th?id=OIP.GtOskmKrqywEWP8p6MMGXwHaHa&pid=Api&P=0&h=180">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div >
+         <h1 id="clock"> </h1>
+    </div>
+    
+</body>
+
+<script>
+    // definition
+    function getTime(){
+        const time = new Date()
+        console.log(time);
+        let hour = time.getHours()
+        console.log(hour);
+        let sec = time.getSeconds()
+        console.log(sec);
+        let min = time.getMinutes()
+        console.log(min);
+        clock.innerHTML = `${hour} : ${min} : ${sec} ${hour>=12?'PM':'AM'}`
+        // TO CALL AUTOMATICALLY (TO REFRESH AUTOMATICALLY)
+        setTimeout(()=>{
+            getTime()
+        },1000)
+
+    }
+    //call 
+    getTime()
+</script>
+</html>
